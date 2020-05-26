@@ -1,0 +1,141 @@
+<app-header [openLoginFromVideoDetail]="openLogin"></app-header>
+<div class="grid wrapper">
+  <div class="wide">
+    <div class="listed-view">
+      <ul class="container">
+        <li class="view-item">
+          <a href="" class="view-item--link">
+            <i class="fas fa-home"></i>
+            Home
+          </a>
+          <i class="fas fa-chevron-right fa-custom-right"></i>
+        </li>
+        <li class="view-item">
+          <a href="" class="view-item--link">
+            Archives
+          </a>
+          <i class="fas fa-chevron-right fa-custom-right"></i>
+        </li>
+        <li class="view-item">
+          <a href="" class="view-item--link">
+            Drake
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="main-area">
+      <div class="video-container">
+        <iframe [attr.src]="videoUrl" allow="picture-in-picture;autoplay" allowfullscreen></iframe>
+      </div>
+      <div class="row">
+        <div class="c-1">
+          <ul class="nav_social-list">
+            <span class="title">Share</span>
+            <li class="nav_social-item">
+              <a href="" class="nav_social-item--link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="nav_social-item">
+              <a href="" class="nav_social-item--link">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="nav_social-item">
+              <a href="" class="nav_social-item--link">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li class="nav_social-item">
+              <a href="" class="nav_social-item--link">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+            <li class="nav_social-item">
+              <a href="" class="nav_social-item--link">
+                <i class="fab fa-snapchat-ghost"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="c-6">
+          <div class="video--type">Music</div>
+          <div class="video--title">See you again-Charlie puth</div>
+          <div class="video--info">
+            <div class="video-release--on">Sep 08,2015</div>
+            <ul class="video-attention--info">
+              <li class="video-interactive--item">
+                <i class="fas fa-eye"></i>
+                <span class="qty-like">20</span>
+              </li>
+              <li class="video-interactive--item">
+                <i class="fas fa-thumbs-up"></i>
+                <span class="qty-view">100</span>
+              </li>
+              <li class="video-interactive--item">
+                <i class="far fa-comments"></i>
+                <span class="qty-comment">20</span>
+              </li>
+            </ul>
+          </div>
+          <div class="video--description">
+            <span class="description-text">
+              I love dals. All kinds of them but yellow moong dal is my go-to lentil when I am in need of some easy comfort food. In this recipe I added suva or dill leaves to the classic moong dal recipe for a twist. I like the simplicity of this recipe, just the dal, tomatoes and fresh dill with simple seasoning. This recipe is without any onions and garlic. I love the aroma of fresh dill and I think, in Indian food, we don’t really use dill as much as we can. Nine out of ten times, the only green leaves sprinkled on a curry or a dal is fresh coriander and while I love coriander too, dill adds a unique freshness and aroma to the dal. The delicate feathery leaves of dill are also rich in Vitamin A, C and minerals like iron and manganese.
+            </span>
+          </div>
+          <div class="auth" [class.isLogined]="isLogined">
+            <div class="user-icon-container">
+              <img src="../../../assets/images/logo.png" alt="" class="user-icon">
+            </div>
+            <div class="post-comment--input">
+              <input type="text" class="post-comment--text" placeholder="Nhập bình luận...">
+              <div class="post-comment-btn">
+                <button class="btn">Hủy</button>
+                <button class="btn btn--primary">Gửi bình luận</button>
+              </div>
+            </div>
+          </div>
+          <div class="auth" [class.isLogined]="!isLogined">
+            <button class="btn btn--primary post-comment--logined" (click)="openLoginModal()">
+              Đăng nhập để gửi bình luận
+            </button>
+          </div>
+          <!-- <span class="video-comment-text">Comment</span> -->
+          <div class="video--comment">
+            <ul class="comment-list">
+              <li *ngFor="let comment of comments" class="comment-item">
+                <div class="user-icon-container">
+                  <img src="../../../assets/images/logo.png" alt="" class="user-icon">
+                </div>
+                <div class="comment--info">
+                  <div class="comment--info-release">
+                    <span class="user--name">{{comment.user_username}}</span>
+                    <span class="release--on">{{comment.gen_time}}</span>
+                  </div>
+                  <div class="comment-description">
+                    {{comment.message}}
+                  </div>
+                  <div class="feedback-comment">
+                    <ul class="feedback-comment-list">
+                      <li class="feedback-comment-item">
+                        <i class="fas fa-thumbs-up"></i>
+                      </li>
+                      <li class="feedback-comment-item">
+                        <i class="fas fa-thumbs-down"></i>
+                      </li>
+                      <li class="feedback-comment-item">
+                        Reply
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

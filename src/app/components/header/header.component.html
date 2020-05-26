@@ -1,0 +1,88 @@
+<header class="header">
+  <div class="grid">
+    <nav class="wide header_navbar">
+      <ul class="header_nav-list">
+        <li class="header_nav-item header_nav-top-news">
+          <span class="header_news">Breaking news:</span>
+          <div class="header_news-new">
+            <a href="" class="header_nav-item--link header_news-link">New album'Drake will release in July</a>
+          </div>
+        </li>
+
+      </ul>
+      <ul class="header_nav-list header_nav-list--main">
+        <li class="header_nav-item">
+          <a href="" class="header_nav-item--link">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </li>
+        <li class="header_nav-item">
+          <a href="" class="header_nav-item--link">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li class="header_nav-item">
+          <a href="" class="header_nav-item--link">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </li>
+        <li class="header_nav-item">
+          <div class="header_search-container">
+            <div class="header_search-input">
+              <input type="text" class="header_search-input--text" placeholder="Nhập tên bài hát">
+              <div class="header_search-recommended"></div>
+            </div>
+            <div class="header_search-btn">
+              <button class="header_search-btn--main">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="header_nav-item">
+          <button class="header_nav-item--link auth" [class.isLogined]="isLogined">
+            <i class="fas fa-user"></i>
+            <p>{{username}}</p>
+          </button>
+          <button class="header_nav-item--link auth" (click)="openLogin()" [class.isLogined]="!isLogined">
+            Đăng nhập
+          </button>
+          <!-- <button class="header_nav-item--link">
+            Đăng ký
+          </button> -->
+        </li>
+      </ul>
+    </nav>
+    <div class="header-main">
+      <div class="container">
+        <div class="header_main-logo">
+          <img src="../../../assets/images/logo.png" alt="image not found!" class="logo">
+        </div>
+        <ul class="header_main-option">
+          <li class="header_main-option-item">
+            <a routerLink="" class="header_main-option-item--link">Home</a>
+          </li>
+          <li class="header_main-option-item">
+            <a href="" class="header_main-option-item--link">Archives</a>
+          </li>
+          <li class="header_main-option-item">
+            <a href="" class="header_main-option-item--link">Pages
+              <i class="fas fa-chevron-down"></i>
+            </a>
+          </li>
+          <li class="header_main-option-item">
+            <a href="" class="header_main-option-item--link">Features
+              <i class="fas fa-chevron-down"></i>
+            </a>
+          </li>
+          <li class="header_main-option-item">
+            <a href="" class="header_main-option-item--link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+<app-login [openModal]="openLoginModal" (closeModal)="closeLoginModal($event)"></app-login>
+
+

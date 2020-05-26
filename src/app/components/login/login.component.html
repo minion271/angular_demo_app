@@ -1,0 +1,55 @@
+<div class="modal_container" [class.show]="openModal">
+  <div class="modal_overlay"></div>
+  <div class="modal_body">
+    <div class="auth_form">
+      <form ngNativeValidate class="auth_form-container" (ngSubmit)="login()">
+        <div class="auth_form-header">
+          <h3 class="auth_form-header-text">Đăng nhập</h3>
+          <a class="auth_form-switch-btn" href="#" id="sign_up--a">Đăng ký</a>
+        </div>
+        <div class="auth_form-form">
+          <label for="username" class="auth_form-group">
+            <input type="text" [(ngModel)]="username" name="username" placeholder="Tên đăng nhập" class="auth_form-input" required>
+          </label>
+          <label for="password" class="auth_form-group">
+            <input type="password" [(ngModel)]="password" name="password" placeholder="Mật khẩu" class="auth_form-input" required>
+          </label>
+        </div>
+        <div class="auth_form-aside">
+          <div class="auth_form-aside-help">
+            <button class="auth_form-aside-help-link auth_form-aside-help-btn">
+              Quên Mật Khẩu
+            </button>
+            <span class="auth_form-aside-help-separate"></span>
+            <a href="#" class="auth_form-aside-help-link"> Cần Trợ Giúp?</a>
+
+          </div>
+        </div>
+        <div class="auth_form-button">
+          <button class="btn btn--margin" (click)="cancelLoginProcess()">Trở Lại</button>
+          <button class="btn btn--primary">Đăng Nhập</button>
+        </div>
+      </form>
+      <div class="auth_form-social">
+        <a href="" class="btn btn-icon btn-icon-sms">
+          <i class="far fa-comment-dots"></i>
+          <span class="auth_form-social-text-margin">
+            SMS
+          </span>
+        </a>
+        <a href="" class="btn btn-icon btn-icon-facebook">
+          <i class="fab fa-facebook"></i>
+          <span class="auth_form-social-text-margin">
+            Facebook
+          </span>
+        </a>
+        <a href="" class="btn btn-icon btn-icon-google">
+          <i class="fab fa-google"></i>
+          <span class="auth_form-social-text-margin">
+            Google
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
