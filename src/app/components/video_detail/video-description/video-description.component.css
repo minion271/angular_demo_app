@@ -1,0 +1,44 @@
+.video--type{
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  color:white;
+  height: 30px;
+  line-height: 30px;
+  width: 45px;
+  border: none;
+  border-radius: 2px;
+  background-color: var(--header-main-color);
+  text-align: center;
+  margin-bottom: 45px;
+  cursor: pointer;
+}
+.video--title{
+  font-size: 2rem;
+  color: white;
+  font-weight: 600;
+}
+.video--info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--header-color);
+  font-size: 1.5rem;
+}
+.video-attention--info{
+  display: flex;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+}
+.video-interactive--item{
+  margin: 0 10px;
+}
+.video-interactive--item > span{
+  margin-left: 3px;
+}
+
+.video--description{
+  margin: 45px 0;
+  color: var(--header-color);
+  font-size: 1.5rem;
+}

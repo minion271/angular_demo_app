@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CheckLoginService } from './services/loginstatus.service';
+import { CheckLoginService } from './services/checklogin.service';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +7,11 @@ import { CheckLoginService } from './services/loginstatus.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'demo-app';
-  constructor(private loginStatusService:CheckLoginService){}
+
+  constructor(private checkLoginService:CheckLoginService){}
   ngOnInit(){
-    if(sessionStorage.getItem('username'))this.loginStatusService.updateLoginStatus(true);
-    else this.loginStatusService.updateLoginStatus(false);
+    if(sessionStorage.getItem('username'))this.checkLoginService.updateLoginStatus(sessionStorage.getItem('username'));
+    else this.checkLoginService.updateLoginStatus(" ");
   }
 
 }

@@ -1,0 +1,24 @@
+<div class="video--type">Music</div>
+<div class="video--title">{{video.title}}</div>
+<div class="video--info">
+  <div class="video-release--on">{{video.date_public|date:'short'}}</div>
+  <ul class="video-attention--info">
+    <li class="video-interactive--item">
+      <i class="fas fa-eye"></i>
+      <span class="qty-like">{{video.total_view}}</span>
+    </li>
+    <li class="video-interactive--item sub_like" (click)="increaseLike(video.id)">
+      <i class="fas fa-thumbs-up"></i>
+      <span class="qty-view">{{video.total_like}}</span>
+    </li>
+    <li class="video-interactive--item">
+      <i class="far fa-comments"></i>
+      <span class="qty-comment">{{video.commentDTOS.length}}</span>
+    </li>
+  </ul>
+</div>
+<div class="video--description">
+  <span class="description-text">
+    {{video.description}}
+  </span>
+</div>

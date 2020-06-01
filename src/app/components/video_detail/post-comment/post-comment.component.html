@@ -1,0 +1,22 @@
+<form ngNativeValidate (ngSubmit)="postComment()"  class="feedback_video auth" [class.isLogined]="isLogined">
+  <div class="user-icon-container">
+    <img src="../../../assets/images/logo.png" alt="" class="user-icon">
+  </div>
+  <div class="post-comment-container">
+    <label for="feedback_text" class="post-comment--input" (click)="openPostCommentModal()">
+      <input type="text" name="feedback_text"
+        class="post-comment--text" placeholder="Nhập bình luận..."
+        [(ngModel)]="feedback_text" autocomplete="off">
+    </label>
+    <div class="post-comment-btn">
+      <a class="btn" (click)="closePostComment()">Hủy</a>
+      <button class="btn btn--primary" >Gửi bình luận</button>
+    </div>
+  </div>
+
+</form>
+<div class="auth" [class.isLogined]="!isLogined">
+  <button class="btn btn--primary post-comment--logined" (click)="openLoginModal()">
+    Đăng nhập để gửi bình luận
+  </button>
+</div>

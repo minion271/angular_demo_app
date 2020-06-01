@@ -10,7 +10,7 @@
 	--header-main-height:calc(var(--header-height) - var(--header-navbar-height));
 }
 *{
-  box-sizing: inherit;
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -61,7 +61,7 @@ button{
 	bottom: 0;
 	top: 0;
   display: none;
-  /* z-index: 5; */
+  z-index: 999;
   /* display: flex; */
 }
 .show{
@@ -200,3 +200,28 @@ button{
 .isLogined{
   display: flex;
 }
+
+
+/* icon comment area */
+.user-icon-container{
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.user-icon{
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+
+/*  */
+.sub_like{
+  cursor: pointer;
+}
+.sub_like:hover{
+  opacity: 0.8;
+}
+/*  */

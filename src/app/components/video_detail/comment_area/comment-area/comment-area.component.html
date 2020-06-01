@@ -1,0 +1,31 @@
+<div class="video--comment">
+  <ul class="comment-list">
+    <li *ngFor="let comment of comments" class="comment-item">
+      <div class="user-icon-container">
+        <img src="../../../assets/images/logo.png" alt="" class="user-icon">
+      </div>
+      <div class="comment--info">
+        <div class="comment--info-release">
+          <span class="user--name">{{comment.user_username}}</span>
+          <span class="release--on">{{comment.gen_time|date:'short'}}</span>
+        </div>
+        <div class="comment-description">
+          {{comment.message}}
+        </div>
+        <div class="feedback-comment">
+          <ul class="feedback-comment-list">
+            <li class="feedback-comment-item">
+              <i class="fas fa-thumbs-up"></i>
+            </li>
+            <li class="feedback-comment-item">
+              <i class="fas fa-thumbs-down"></i>
+            </li>
+            <li class="feedback-comment-item">
+              Reply
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

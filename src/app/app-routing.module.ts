@@ -8,6 +8,13 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { LogoutComponent } from './components/logout/logout.component';
+import { MainViewComponent } from './components/video_detail/main-view/main-view.component';
+import { PostCommentComponent } from './components/video_detail/post-comment/post-comment.component';
+import { SocialShareComponent } from './components/video_detail/social_share/social-share/social-share.component';
+import { VideoDescriptionComponent } from './components/video_detail/video-description/video-description.component';
+import { CommentAreaComponent } from './components/video_detail/comment_area/comment-area/comment-area.component';
+import { ListVideoComponent } from './components/main-page/list-video/list-video.component';
+import { MainVideoComponent } from './components/main-page/main-video/main-video.component';
 
 
 const routes: Routes = [
@@ -16,7 +23,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes),
+  imports: [
+    RouterModule.forRoot(routes),
     FormsModule,
     CommonModule
   ],
@@ -26,7 +34,15 @@ const routes: Routes = [
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    MainViewComponent,
+    PostCommentComponent,
+    SocialShareComponent,
+    VideoDescriptionComponent,
+    CommentAreaComponent,
+    MainVideoComponent,
+    ListVideoComponent
+
   ],
   exports: [RouterModule]
 })

@@ -1,4 +1,14 @@
-
-<h3>
-  <a routerLink="/video/{{ id }}">Xem video {{id}}</a>
-</h3>
+<app-header></app-header>
+<div class="grid wrapper">
+  <div class="wide">
+    <div class="container">
+      <div class="c-8">
+        <app-main-video></app-main-video>
+      </div>
+      <div class="c-4">
+        <app-list-video></app-list-video>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

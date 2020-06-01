@@ -7,10 +7,10 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 
 export class CheckLoginService{
-  isLogin:BehaviorSubject<boolean>=new BehaviorSubject<boolean>(false);
-  loginStream$:Observable<boolean>=this.isLogin.asObservable();
+  isLogin:BehaviorSubject<string>=new BehaviorSubject<string>(" ");
+  loginStream$:Observable<string>=this.isLogin.asObservable();
   constructor(){}
-  updateLoginStatus(status:boolean){
-    this.isLogin.next(status);
+  updateLoginStatus(username:string){
+    this.isLogin.next(username);
   }
 }

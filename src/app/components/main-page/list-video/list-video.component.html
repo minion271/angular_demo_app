@@ -1,0 +1,24 @@
+<ul class="video_list">
+  <li class="video_list-item" *ngFor="let video of videos"
+    [class.video_list-item--active]="item_active" (click)="selectItem(video)">
+    <a class="video_list-item--link">
+      <div class="video_list-item--img">
+        <img src="../../../assets/images/hi.jpg" alt="" class="video_img">
+      </div>
+      <div class="video_description">
+        <div class="video_title">{{video.title}}</div>
+        <div class="video_interactive">
+          <span class="video_interactive-slide">
+            <i class="far fa-comments icon"></i> {{video.comment.length}}
+          </span>
+          <span class="video_interactive-slide">
+            <i class="fas fa-eye icon"></i> {{video.total_view}}
+          </span>
+          <span class="video_interactive-slide">
+            <i class="fas fa-thumbs-up icon"></i> {{video.total_like}}
+          </span>
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>

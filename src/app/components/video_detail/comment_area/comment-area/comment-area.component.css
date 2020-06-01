@@ -1,0 +1,38 @@
+.video--comment{
+  margin-top: 15px;
+  /* border-top: 1px solid var(--header-color); */
+}
+.comment-list{
+  list-style: none;
+  font-size: 1.5rem;
+  color: var(--header-color);
+  padding: 0;
+  margin-top: 15px;
+}
+.comment-item{
+  display: flex;
+}
+
+.comment--info{
+  flex: 1;
+}
+.comment--info-release{
+  display: flex;
+  justify-content: space-between;
+}
+.user--name{
+  color: white;
+  font-size: 1.7rem;
+}
+.feedback-comment-list{
+  list-style: none;
+  display: flex;
+}
+.feedback-comment-item{
+  margin-right: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.feedback-comment-item:hover{
+  opacity: .8;
+}

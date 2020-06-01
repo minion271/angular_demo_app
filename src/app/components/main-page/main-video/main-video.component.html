@@ -1,0 +1,31 @@
+<div class="video--current bg-img" style="background-image: url(./../../../../assets/images/hi.jpg);">
+  <div class="video--button">
+    <a routerLink="/video/{{videoActive.id}}" class="video--link">
+      <i class="fas fa-play"></i>
+    </a>
+  </div>
+  <div class="video--description">
+    <span class="video--type">Music</span>
+    <h3 class="video--title">
+      <a href="" class="video--link">
+        {{videoActive.title}}
+      </a>
+    </h3>
+    <div class="video--react">
+      <div class="video--interactive">
+        <span class="video_interactive-item" *ngIf="videoActive.comment">
+          <i class="far fa-comments"></i> {{videoActive.comment.length}}
+        </span>
+        <span class="video_interactive-item">
+          <i class="fas fa-eye"></i> {{videoActive.total_view}}
+        </span>
+        <span class="video_interactive-item">
+          <i class="fas fa-thumbs-up"></i> {{videoActive.total_like}}
+        </span>
+      </div>
+      <span class="video-timeline">
+          5:30
+      </span>
+    </div>
+  </div>
+</div>

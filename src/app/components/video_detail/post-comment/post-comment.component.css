@@ -1,0 +1,40 @@
+
+.post-comment-container{
+  flex:1;
+}
+
+
+.auth{
+  justify-content: center;
+  align-items: center;
+}
+.post-comment--logined{
+  height: 50px;
+  width: 150px;
+}
+
+.post-comment--text{
+  height: 50px;
+  line-height: 50px;
+
+  width: 100%;
+  border: none;
+  font-size: 1.6rem;
+  background-color: var(--primary-color);
+  outline: none;
+  color: var(--header-color);
+  word-wrap: break-word;
+}
+.post-comment--text:focus{
+  border-bottom: 1px solid var(--header-color);
+}
+
+.post-comment-btn{
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0;
+}
+
+
+
+
